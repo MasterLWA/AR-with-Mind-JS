@@ -15,17 +15,13 @@
   <body>
     <a-scene embedded arjs>
       <!-- First Marker and Object -->
-      <a-marker type="pattern" url="assets/pattern-IMG_2578.patt">
-        <a-sphere radius="1" color="#EF2D5E"></a-sphere>
+      <a-marker type="pattern" url="https://raw.githubusercontent.com/flippedcoder/blog-examples/main/clear-world/pattern-check.patt">
+        <a-sphere position='0 0.5 0' radius="5" color="red"></a-sphere>
       </a-marker>
 
       <!-- New Marker and New 3D Object (Box for example) -->
-      <a-marker type="pattern" url="./assets/markerimg.patt"
-        <a-sphere radius="1" color="#EF2D5E"></a-sphere>
-    </a-marker>
-
       <a-marker type="pattern" url="./assets/markerimg.patt">
-        <a-sphere radius="1" color="#EF2D5E"></a-sphere>
+        <a-box position='0 0.5 0' material='color: yellow;'></a-box>
       </a-marker>
 
       <!-- If you have a more complex 3D model in glTF format -->
