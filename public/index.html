@@ -15,25 +15,15 @@
   <body>
     <a-scene embedded arjs>
       <!-- First Marker and Object -->
-      <a-marker type="pattern" url="https://raw.githubusercontent.com/flippedcoder/blog-examples/main/clear-world/pattern-check.patt" >
-        <!-- <a-sphere position="0 0.5 0" radius="1" color="red"></a-sphere> -->
-         <!-- Set .gbl to show -->
-        <a-entity gltf-model="./assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0 0"></a-entity>
+      <a-marker type="pattern" url="https://raw.githubusercontent.com/flippedcoder/blog-examples/main/clear-world/pattern-check.patt">
+        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0 0" rotation="0 0 0"></a-entity>
       </a-marker>
-      
 
-      <!-- New Marker and New 3D Object (Box for example) -->
+      <!-- New Marker and New 3D Object (Elephant coming out from the wall) -->
       <a-marker type="pattern" url="./assets/markerimg.patt">
-        <a-box position='0 0.5 0' material='color: yellow;'></a-box>
+        <!-- Adjusted position to be slightly in front of the wall with 90-degree upward rotation -->
+        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0.5 -0.5" rotation="90 0 0"></a-entity>
       </a-marker>
-
-      <!-- If you have a more complex 3D model in glTF format -->
-      <!-- Uncomment the below and replace URL to point to your .gltf file -->
-      <!-- 
-      <a-marker type="pattern" url="https://yourserver.com/path-to-your-new-marker.patt">
-        <a-entity gltf-model="url(/path-to-your-model/3d-model.gltf)" scale="0.5 0.5 0.5" position="0 0 0"></a-entity>
-      </a-marker>
-      -->
 
       <a-entity camera></a-entity>
     </a-scene>
