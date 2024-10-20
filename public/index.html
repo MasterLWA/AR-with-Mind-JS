@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <title>AR React App</title>
+    <title>React App</title>
   </head>
 
   <body>
@@ -19,10 +19,10 @@
         <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0 0" rotation="0 0 0"></a-entity>
       </a-marker>
 
-      <!-- New Marker and New 3D Object (Elephant coming out from the wall) -->
+      <!-- New Marker and New 3D Object (Elephant coming out from a vertical wall) -->
       <a-marker type="pattern" url="./assets/markerimg.patt">
-        <!-- Adjusted position to be slightly in front of the wall with 90-degree upward rotation -->
-        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0.5 -0.5" rotation="90 0 0"></a-entity>
+        <!-- Adjusted position and rotation for vertical wall -->
+        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0.5 -0.5" rotation="0 90 0"></a-entity>
       </a-marker>
 
       <a-entity camera></a-entity>
