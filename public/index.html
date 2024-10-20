@@ -14,19 +14,28 @@
 
   <body>
     <a-scene embedded arjs>
-      <!-- First Marker and Object -->
+      <!-- First Marker and Elephant -->
+      <a-marker type="pattern" url="https://raw.githubusercontent.com/flippedcoder/blog-examples/main/clear-world/pattern-check-3.patt">
+        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" 
+                  scale="0.5 0.5 0.5" 
+                  position="0 0.5 -0.5" 
+                  rotation="0 90 0">
+        </a-entity>
+      </a-marker>
+
+      <!-- Second Marker and Giraffe -->
       <a-marker type="pattern" url="https://raw.githubusercontent.com/flippedcoder/blog-examples/main/clear-world/pattern-check.patt">
-        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0 0" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/scenenew.glb"
+                  scale="0.4 0.4 0.4" 
+                  position="0 0 -1" 
+                  rotation="0 0 0">
+        </a-entity>
       </a-marker>
 
-      <!-- New Marker and New 3D Object (Elephant coming out from a vertical wall) -->
-      <a-marker type="pattern" url="./assets/markerimg.patt">
-        <!-- Adjusted position and rotation for vertical wall -->
-        <a-entity gltf-model="https://raw.githubusercontent.com/MasterLWA/AR-with-Mind-JS/main/public/assets/Elephant.glb" scale="0.5 0.5 0.5" position="0 0.5 -0.5" rotation="0 90 0"></a-entity>
-      </a-marker>
-
+      <!-- Camera Entity -->
       <a-entity camera></a-entity>
     </a-scene>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
